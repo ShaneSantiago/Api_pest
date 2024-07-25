@@ -17,7 +17,20 @@ module.exports = {
           cidade: 'teste',
           createdAt: new Date(),
           updatedAt: new Date()
-      }
+      },
+      {
+        nome: 'John Teste',
+        email: 'teste1@gmail.com',
+        senha: '123456',
+        telefone: '123456789',
+        cpf: '12345678910',
+        cep: '12345678',
+        bairro: 'teste',
+        estado: 'teste',
+        cidade: 'teste',
+        createdAt: new Date(),
+        updatedAt: new Date()
+    }
   ], {});
 
   },

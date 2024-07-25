@@ -11,8 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Mensagens.belongsTo(models.Usuario, { foreignKey: 'usuario_id_remetente', as: 'remetente' });
-
-      // Uma mensagem pertence a um destinatário (usuário)
       Mensagens.belongsTo(models.Usuario, { foreignKey: 'usuario_id_destinatario', as: 'destinatario' });
     }
   }

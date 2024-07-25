@@ -19,7 +19,7 @@ const listarMensagemsDoUsuario = async (req, res) => {
 }
 
 const conversar = async (req, res) => {
-    const { id_remetente, id_destinatario } = req.params; // Pegando os parâmetros corretamente
+    const { id_remetente, id_destinatario } = req.params;
     try {
         const conversa = await mensagemServices.mostrarMensagensEntreUsuarios(id_remetente, id_destinatario);
         res.status(200).json(conversa);

@@ -4,12 +4,12 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:8081', // ou '*' para todas as origens
+  origin: 'http://localhost:8081',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-app.use(express.json()); // Certifique-se de que o corpo das requisições seja interpretado como JSON
+app.use(express.json());
 
 routes(app);
 

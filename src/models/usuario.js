@@ -11,18 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Usuario.hasMany(models.Pets, { foreignKey: 'usuario_id', as: 'pets' });
-
-      // Um usuário pode enviar muitas mensagens
       Usuario.hasMany(models.Mensagens, { foreignKey: 'usuario_id_remetente', as: 'mensagensEnviadas' });
-
-      // Um usuário pode receber muitas mensagens
       Usuario.hasMany(models.Mensagens, { foreignKey: 'usuario_id_destinatario', as: 'mensagensRecebidas' });
     }
   }
   Usuario.init({
     nome: DataTypes.STRING,
     senha: DataTypes.STRING,
-    salt: DataTypes.STRING,
     email: DataTypes.STRING,
     telefone: DataTypes.STRING,
     cep: DataTypes.STRING,
